@@ -3,7 +3,48 @@ languageCode = 'en-us'
 title = 'My Personal Blog'
 theme = 'PaperMod'
 
-[Params]
+[params]
   description = "A personal blog."
   readmore = true
   pager = true
+  ShowShareButtons = true
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+
+  [params.homeInfoParams]
+    Title = "Hi there 👋"
+    Content = "Welcome to my personal blog. I write about tech and other things."
+
+  [params.socialIcons]
+    [params.socialIcons.github]
+      url = "https://github.com/gtref"
+
+  [params.assets]
+    disableHLJS = true
+
+[menu]
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 30
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON" ]
