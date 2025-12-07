@@ -2,3 +2,8 @@ baseURL = 'https://gtref.github.io/blog/'
 languageCode = 'en-us'
 title = 'My Personal Blog'
 theme = 'PaperMod'
+
+[Params]
+  description = "A personal blog."
+  readmore = true
+  pager = true
