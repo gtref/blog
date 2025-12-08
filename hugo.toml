@@ -24,6 +24,9 @@ theme = 'PaperMod'
   [params.assets]
     disableHLJS = true
 
+[params.search]
+    enable = true
+
 [menu]
   [[menu.main]]
     identifier = "tags"
@@ -48,3 +51,5 @@ theme = 'PaperMod'
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
+  section = [ "HTML", "RSS" ]
+  taxonomy = [ "HTML", "RSS" ]
