@@ -6,8 +6,16 @@
     <description>Recent content in Posts on My Personal Blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Dec 2025 19:19:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://gtref.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My websites</title>
+      <link>https://gtref.github.io/blog/posts/websites/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://gtref.github.io/blog/posts/websites/</guid>
+      <description>&lt;h1 id=&#34;hello-there&#34;&gt;hello there.&lt;/h1&gt;
+&lt;p&gt;I know this is my and post and I want it to be short so here it goes. I have 2 websites and 1 product currently released. links are below. My first website is located at the following link &lt;a href=&#34;https://h9771.wordpress.com&#34;&gt;h9771.wordpress.com&lt;/a&gt;. This website just has all of the projects that I have undertaken before I made this site and how to do them as well. The next one is located at the following url &lt;a href=&#34;https://techstuff48.wordpress.com&#34;&gt;techstuff48.wordpress.com&lt;/a&gt;. This one is just random stuff that I could not fit anywhere.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>https://gtref.github.io/blog/posts/my-first-post/</link>
@@ -15,14 +23,6 @@
       <guid>https://gtref.github.io/blog/posts/my-first-post/</guid>
       <description>&lt;p&gt;Hello there. welcome to my blog on any and all things tech that I have and will encounter over the years. This first post is just a sort or welcome. So welcome and I hope you enjoy.&lt;/p&gt;
 &lt;p&gt;*** Just note that the code of this website was vibe coded using Google Jules.***&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My websites</title>
-      <link>https://gtref.github.io/blog/posts/websites/</link>
-      <pubDate>Mon, 09 Dec 2024 19:19:34 +0000</pubDate>
-      <guid>https://gtref.github.io/blog/posts/websites/</guid>
-      <description>&lt;h1 id=&#34;hello-there&#34;&gt;hello there.&lt;/h1&gt;
-&lt;p&gt;I know this is my and post and I want it to be short so here it goes. I have 2 websites and 1 product currently released. links are below. My first website is located at the following link &lt;a href=&#34;https://h9771.wordpress.com&#34;&gt;h9771.wordpress.com&lt;/a&gt;. This website just has all of the projects that I have undertaken before I made this site and how to do them as well. The next one is located at the following url &lt;a href=&#34;https://techstuff48.wordpress.com&#34;&gt;techstuff48.wordpress.com&lt;/a&gt;. This one is just random stuff that I could not fit anywhere.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
