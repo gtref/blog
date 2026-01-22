@@ -1,6 +1,6 @@
 ---
 title: "Vibe Coding?"
-date: 2026-01-23T12:34:00Z
+date: 2026-01-23T12:34:00+13:00
 draft: false
 tags: ["vibe-coding", "ai"]
 ---
