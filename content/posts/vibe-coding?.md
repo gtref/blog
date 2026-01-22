@@ -1,9 +1,10 @@
 ---
-date: '2026-01-23T12:34:00Z'
+title: "Vibe Coding?"
+date: 2026-01-23T12:34:00Z
 draft: false
-title: 'Vibe Coding?'
-tags: ["Vibe coding", "ai"]
+tags: ["vibe-coding", "ai"]
 ---
+
 
 # Hello. 
 
