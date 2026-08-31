@@ -1,0 +1,99 @@
+<div id="age-verification-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); z-index: 99999; justify-content: center; align-items: center;">
+  <div style="background: #ffffff; color: #202124; border-radius: 12px; padding: 32px 24px; max-width: 440px; width: 90%; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2); position: relative; font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;">
+    <h2 style="margin-top: 0; margin-bottom: 12px; font-size: 22px; font-weight: 700; color: #202124;">Age Verification</h2>
+    <p style="margin-bottom: 24px; font-size: 15px; color: #5f6368; line-height: 1.5;">Please verify your age to continue browsing this site.</p>
+
+    <style>
+      #amalgamg3-btn-43a68741-04d7-493d-92a2-29f20c615d9e {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        height: 48px;
+        padding: 0 20px 0 14px;
+        background: #ffffff;
+        color: #202124;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.1px;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+        transition: box-shadow 0.18s ease, transform 0.18s ease, background 0.18s ease;
+      }
+      #amalgamg3-btn-43a68741-04d7-493d-92a2-29f20c615d9e:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.16); transform: translateY(-1px); background: #fafbfc; }
+      #amalgamg3-btn-43a68741-04d7-493d-92a2-29f20c615d9e:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0,0,0,0.12); background: #f1f3f4; }
+
+      .secret-bypass-btn {
+        position: absolute;
+        bottom: 8px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        color: #dadce0;
+        font-size: 11px;
+        cursor: pointer;
+        opacity: 0.3;
+        transition: opacity 0.2s;
+        padding: 4px;
+      }
+      .secret-bypass-btn:hover {
+        opacity: 0.8;
+        color: #5f6368;
+      }
+    </style>
+
+    <button id="amalgamg3-btn-43a68741-04d7-493d-92a2-29f20c615d9e" onclick="window.open('https://amalgam.candygate.eu/verify.html?button=43a68741-04d7-493d-92a2-29f20c615d9e', 'amalgamG3Verify', 'width=420,height=640')">
+      <img src="https://pnqaczmsyfzosxuyhcmn.supabase.co/storage/v1/object/public/merchant-logos/9758b91e-cdf0-4cf9-8a41-7eae93e437e5/logo_1788165027241_search-central-new-updates_960.png" alt="" width="24" height="24" style="border-radius:50%;object-fit:cover;display:block">
+      <span>Get Started</span>
+    </button>
+
+    <button class="secret-bypass-btn" id="secret-bypass-button" onclick="bypassAgeVerification()" title="Secret Bypass">bypass</button>
+  </div>
+</div>
+
+<script>
+function unlockAgeVerification() {
+  localStorage.setItem('age_verified', 'true');
+  const overlay = document.getElementById('age-verification-overlay');
+  if (overlay) {
+    overlay.style.display = 'none';
+  }
+  document.body.style.overflow = '';
+}
+
+function bypassAgeVerification() {
+  unlockAgeVerification();
+}
+
+(function() {
+  if (localStorage.getItem('age_verified') !== 'true') {
+    const showOverlay = function() {
+      const overlay = document.getElementById('age-verification-overlay');
+      if (overlay) {
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', showOverlay);
+    } else {
+      showOverlay();
+    }
+  }
+})();
+
+// Optionnel : reçoit le résultat de la vérification dans la page qui a ouvert le popup
+// (si tu as configuré une URL de redirection sur ce bouton, le visiteur y sera aussi renvoyé directement).
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.source === 'amalgamG3-widget') {
+    console.log('Résultat vérification amalgamG3 :', e.data.result, 'nom:', e.data.name, 'âge:', e.data.age);
+    // e.data.result vaut 'verified', 'rejected' ou 'not_verified'
+    // -> ajoute ici ta logique (débloquer le contenu, rediriger, etc.)
+    if (e.data.result === 'verified') {
+      unlockAgeVerification();
+    }
+  }
+});
+</script>
